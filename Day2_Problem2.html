@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Problem 2</title>
+		<style>
+			#header{
+				width:70%;
+				height:40px;
+				background-color:#e8edeb;
+				border-radius:20px;
+				margin-left:15%;
+			}
+			#main{
+				width:50%;
+				height:500px;
+				margin-left:25%;
+				background-color:#e8edeb;
+				border-radius:20px;
+			}
+			#content{
+				margin-top:40px;
+				text-align:center;
+			}
+			#button1{
+				background-color:white;
+				margin-top:30px;
+				width:300px;
+				height:40px;
+				border-radius:20px;
+				font-size:20px;
+				color:green;
+			}
+			#display{
+				margin-top:50px;
+				margin-left:27%;
+				width:300px;
+				height:300px;
+				background-color:white;
+				border-radius:20px;
+				text-align:center;
+			}
+		</style>
+		<script>
+			function date_time(){
+				var d = new Date()
+				h = d.getHours()
+				m = d.getMinutes()
+				s = d.getSeconds()
+				if(h>12){
+					h = h%12;
+					h = h + " PM";
+				}
+				else{
+					h = h + " AM";
+				}
+				time = h + ":" + m + ":" + s
+				document.getElementById('time').innerHTML = time
+				day = d.getDay()
+				var days = new Array(7);
+				days[0] = "Monday"
+				days[1] = "Tuesday"
+				days[2] = "Wednesday"
+				days[3] = "Thursday"
+				days[4] = "Friday"
+				days[5] = "Saturday"
+				days[6] = "Sunday"
+				document.getElementById('day').innerHTML = days[day]
+			}
+			function print_page(){
+				date_time();
+				window.print();
+			}
+		</script>
+	</head>
+	<body style="background-color:#9abae3">
+		<h1 id="header"><center>Date/Time Picker</center></h1>
+		<div id="main">
+			<div id="content">
+				<button type="button" onclick="date_time()" id="button1">show Date&Time</button>
+			</div>
+			<div id="display">
+				<h2>Today is</h2>
+				<h1 id="day">-----</h1>
+				<h2>Current time is</h2>
+				<h1 id="time">-----</h1>
+				<button type="button" onclick="print_page()" id="button1">Print Page</button>
+			</div>
+			
+		</div>		
+	</body>
+</html>
