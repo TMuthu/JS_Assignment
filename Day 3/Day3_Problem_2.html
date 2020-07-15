@@ -1,0 +1,48 @@
+<!Doctype HTML>
+<html lang="en">
+	<head>
+		<title>Problem 2</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1><center>Java Script</center></h1>
+		<h1>Var,Let and Const</h1>
+		<h3>1.var declarations are globally scoped or function scoped while let and const are block scoped.</h3>
+		<code>
+			var name = "Muthu"<br>
+			{<br>
+				let name = "Kumar"<br>
+				console.log("Inside Block",name)<br>
+			}<br>
+			console.log("Outside Block",name)<br><br>
+			<b>Output:</b><br>
+			Inside block : kumar<br>
+			Outside block : Muthu<br>
+		</code>
+		<h3>2.var and let variables can be updated.const variables can not be updated</h3>
+		<code>
+			var a = 10<br>
+			let b = 5<br>
+			const c = 1<br>
+			a = 5<br>
+			b = 10<br>
+			console.log('a : ',a)<br>
+			console.log('b : ',b)<br>
+			c = 2<br><br>
+			<b>Output:</b><br>
+			a : 5<br>
+			b : 10<br>
+			Uncaught TypeError: Assignment to constant variable.
+		</code>
+		<h3>3.While var and let can be declared without being initialized, const must be initialized during declaration.</h3>
+		<code>
+			var a<br>
+			let b<br>
+			a = 5<br>
+			b = 10<br>
+			const c<br><br>
+			<b>Output:</b><br>
+			Uncaught SyntaxError: Missing initializer in const declaration<br>
+		</code>
+	</body>
+</html>
