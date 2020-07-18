@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+    <head>
+        <script>
+        function shopping(){
+            shoppingList = ['Oil','Vegetables','Mango','Tea'];
+            shoppingBasket = shoppingList;
+            let product = prompt("Enter Your new product");
+            shoppingBasket.push(product)
+            document.getElementById("title").innerHTML = "New Shopping List"
+            document.getElementById("output").innerHTML = shoppingBasket
+        }
+        </script>
+    <head>
+    <body>
+        <h1><center>Shopping List</center></h1>
+        <h2 id="jl">Oil,Vegetables,Mango,Tea</h2>
+        <button onclick="shopping()">Add new</button>
+        <h2 id="title"></h2>
+        <h2 id="output"></h2>
+    </body>
+</html>

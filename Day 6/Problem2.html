@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+    <head>
+        <script>
+        function Object_destruction(){
+            const student = {
+                name : "Muthu",
+                age : 20,
+                projects: {
+                    game: "Two player dice game using js"
+                }
+            }
+            const {name,age,projects:{game}} = student
+            console.log(name,age,game)
+        }
+        </script>
+    <head>
+    <body>
+        <h1>Object Destructure</h1>
+        <button onclick="Object_destruction()">Click Me</button>
+    </body>
+</html>

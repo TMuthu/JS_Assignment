@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+    <head>
+        <script>
+            let ask = (question,yes,no)=>{
+                if(confirm(question)){
+                    yes();
+                }
+                else{
+                    no();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1><center>Arrow Function implementation</center></h1>
+    <button onclick="ask('Do you agree?',yes=>alert('You agreed.'),no=>alert('You Cancelled the execution.'))">Run a Arrow function</button>
+        
+    </body>
+</html>
