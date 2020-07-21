@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Problem 1</title>
+        <script>
+            function start(){
+                arr = []
+                while(true){
+                    let num = prompt("Enter a Number");
+                    if(num==null){
+                        break;
+                    }
+                    arr.push(num);
+                }
+                document.getElementById("inp").innerHTML =arr;
+                let result = arr.filter((inp)=>inp%2!=0).map((inp)=>{return inp*inp*inp});
+                document.getElementById("out").innerHTML = result;
+
+            }
+        </script>  
+    </head>
+    <body>
+        <button onclick="start()">Click to start script</button>
+        <h2 id="inp"></h2>
+        <h1>Result : </h1>
+        <h2 id="out"></h2>
+    </body>
+</html>
