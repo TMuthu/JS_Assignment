@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Problem 1</title>
+        <script>
+            function run(){
+                let colors = ['red','yellow','green','black'];
+                let attr = document.getElementById("body1");
+                let i=0;
+                setInterval(() => {
+                    attr.style.backgroundColor = colors[i%4];
+                    i++;
+                }, 1000);
+
+            }
+        </script>
+    </head>
+    <body id="body1">
+        <button onclick="run()">Run a script</button>
+    </body>
+</html>

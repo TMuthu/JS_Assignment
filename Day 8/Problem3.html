@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Problem 3</title>
+        <style>
+            .ds{
+                background-color:black; 
+                color:white; 
+            }
+        </style>
+        <script>
+            function name_function(){
+                let name = prompt("Enter your name");
+                document.getElementById("message").innerText = "Welcome " + name;
+
+                //Displaying time
+                function time(){
+                let date = new Date();
+                let time = date.toLocaleTimeString();
+                document.getElementById("clock").innerHTML = "Your Time " + time;
+                }
+                setInterval(time,1000);
+
+                
+            }
+            function dark(){
+                //Dark theme
+                console.log("Inside dark")
+                let dt = document.getElementById("body")
+                
+                dt.classList.toggle('ds');
+            }
+            
+        </script>
+    </head>
+    <body id="body">
+        <div style="display: block;">
+        <button onclick="name_function()">Enters into website</button>
+        <button onclick="dark()">Toggle to darkmode</button>
+        </div>
+        <h1 id="message"></h1>
+        <h2 id="clock"></h2>
+    </body>
+</html>

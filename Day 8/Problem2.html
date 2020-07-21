@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Problem 2</title>
+        <script>
+            let run  = ()=>{
+                let inp = prompt("Enter a Number to display table..");
+                let table = document.getElementById("out");
+                for(let i=1;i<=20;i++)
+                {
+                    line = inp + " * " + i +" = " + (i*inp) + "\n";
+                    table.innerText += line;
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="run()">Run script</button>
+        <h3>Table</h3>
+        <p id="out"></p>
+    </body>
+</html>
